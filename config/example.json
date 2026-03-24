@@ -1,0 +1,74 @@
+{
+  "mission": {
+    "cruise_altitude_m": 15,
+    "cruise_speed_ms": 8.0,
+    "descent_speed_ms": 1.5,
+    "land_speed_ms": 0.5,
+    "loiter_radius_m": 2.0,
+    "waypoint_acceptance_radius_m": 1.5,
+    "geofence_radius_m": 500,
+    "geofence_max_alt_m": 50
+  },
+
+  "pre_arm_checks": {
+    "min_gps_fix_type": 3,
+    "require_ekf_ok": true,
+    "min_battery_voltage": 14.2,
+    "min_satellite_count": 8
+  },
+
+  "servos": {
+    "cargo_door": {
+      "gpio_pin": 18,
+      "pwm_frequency_hz": 50,
+      "pulse_closed_ms": 1.0,
+      "pulse_open_ms": 2.0,
+      "move_delay_s": 0.5
+    },
+    "payload_drop": {
+      "gpio_pin": 23,
+      "pwm_frequency_hz": 50,
+      "pulse_closed_ms": 1.0,
+      "pulse_open_ms": 2.0,
+      "mavlink_channel": 9
+    }
+  },
+
+  "cameras": {
+    "dock": {
+      "index": 0,
+      "resolution": [1920, 1080],
+      "fps": 30,
+      "qr_scan_interval_ms": 200
+    },
+    "inflight": {
+      "index": 1,
+      "resolution": [1280, 720],
+      "fps": 30,
+      "qr_scan_interval_ms": 500,
+      "scan_start_altitude_m": 5.0
+    }
+  },
+
+  "tof_sensor": {
+    "i2c_bus": 1,
+    "i2c_address": "0x29",
+    "ranging_mode": "continuous",
+    "timing_budget_ms": 50,
+    "drop_height_cm": 80,
+    "drop_height_tolerance_cm": 10
+  },
+
+  "notifications": {
+    "sms_enabled": true,
+    "call_enabled": true,
+    "email_enabled": false,
+    "sms_template": "Your package (ID: {delivery_id}) has been delivered at {timestamp}. Thank you.",
+    "call_tts_message": "Your delivery has arrived. Package ID {delivery_id} has been dropped at your address."
+  },
+
+  "dashboard": {
+    "sync_interval_s": 2,
+    "telemetry_fields": ["lat", "lon", "alt", "groundspeed", "battery_voltage", "flight_mode", "ekf_ok"]
+  }
+}

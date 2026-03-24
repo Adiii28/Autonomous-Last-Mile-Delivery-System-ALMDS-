@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.whl
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Environment variables (never commit real credentials)
+.env
+
+# Logs and flight data
+logs/
+*.log
+*.bin
+*.tlog
+
+# ArduPilot / Mission Planner artifacts
+*.param
+*.waypoints
+*.fen
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Media (large files — use Git LFS or external storage)
+media/demo.mp4
+
+# Compiled C extensions
+*.so
+*.dylib

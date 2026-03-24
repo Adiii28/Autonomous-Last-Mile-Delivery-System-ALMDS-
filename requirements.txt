@@ -1,0 +1,27 @@
+# Flight control & MAVLink
+dronekit==2.9.2
+pymavlink==2.4.41
+
+# Computer vision & QR decoding
+opencv-python==4.9.0.80
+pyzbar==0.1.9
+numpy==1.26.4
+Pillow==10.3.0
+
+# Web API (servo control dashboard interface)
+flask==3.0.3
+flask-cors==4.0.1
+
+# 4G / GSM communication (SIM7600G-H AT commands)
+pyserial==3.5
+
+# ToF sensor (VL53L8CH via I2C)
+smbus2==0.4.3
+
+# GPIO / PWM (servo control on Raspberry Pi)
+RPi.GPIO==0.7.1
+pigpio==1.78
+
+# Utilities
+python-dotenv==1.0.1
+requests==2.31.0
